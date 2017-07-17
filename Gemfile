@@ -25,12 +25,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -38,6 +39,24 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'rspec-its'
+  gem 'simplecov', :require => false
+  gem 'guard-rspec'
+  gem 'childprocess'
+  gem 'rails-erd'
+  gem 'pry-rails'
+  gem 'guard-rails'
+  gem 'guard-livereload'
+  gem 'guard-bundler'
+end
+
+group :test do
+  gem 'selenium-webdriver', '~> 2.42.0'
+  gem 'capybara', '~> 2.3.0'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'launchy'
 end
 
 group :development do
@@ -49,5 +68,47 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'rails_12factor', '~> 0.0.2'
+end
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'bootstrap-sass'
+gem 'sprockets'
+gem 'bcrypt-ruby'
+gem 'shoulda'
+gem 'date_validator'
+gem 'foreigner'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'searchkick'
+gem 'money'
+gem 'money-rails'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'geocoder'
+gem 'geo_ip'
+gem 'stripe'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+gem 'premailer-rails'
+gem 'nokogiri'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'aws-sdk-v1'
+gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
+gem 'mini_magick'
+gem 'responders'
+gem 'devise' # User management
+gem 'elastic-beanstalk'
+gem 'font-awesome-rails' # Font-awesome icon
+gem 'mail_form' #Forms, mail
+gem 'simple_form' #Forms, mail
