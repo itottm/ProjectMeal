@@ -13,6 +13,8 @@
 !/log/.keep
 !/tmp/.keep
 
+config/application.yml
+
 # Ignore JetBrains file.
 .idea/
 *.iml
